@@ -1,6 +1,6 @@
 package model;
 
-public class Funcionario {
+public abstract class Funcionario {
 
     private String nome;
     private String cpf;
@@ -14,5 +14,7 @@ public class Funcionario {
         this.setor = setor;
     }
 
+    public abstract double calcularSalario();
 
+    public abstract void aplicarAumento(double percentual);
 }
