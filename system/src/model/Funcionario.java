@@ -17,4 +17,12 @@ public abstract class Funcionario {
     public abstract double calcularSalario();
 
     public abstract void aplicarAumento(double percentual);
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
 }
