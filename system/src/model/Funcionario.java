@@ -25,4 +25,14 @@ public abstract class Funcionario {
     public String getCpf() {
         return cpf;
     }
+
+    @Override
+    public String toString() {
+        return "Nome: " + this.nome +
+                "\nCPF: " + this.cpf +
+                "\nTelefone: " + this.telefone +
+                "\nSetor: " + this.setor +
+                "\nSalário: " + calcularSalario() +
+                "\n";
+    }
 }
