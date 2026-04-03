@@ -20,4 +20,8 @@ public class FuncionarioRepository {
         }
         return null;
     }
+
+    public boolean remover(String nome) {
+        return funcionarios.removeIf(f -> f.getNome().equalsIgnoreCase(nome));
+    }
 }
