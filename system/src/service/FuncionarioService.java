@@ -7,6 +7,8 @@ import model.FuncionarioAssalariado;
 import model.FuncionarioHorista;
 import repository.FuncionarioRepository;
 
+import java.util.List;
+
 public class FuncionarioService {
 
     private FuncionarioRepository repository;
@@ -32,4 +34,10 @@ public class FuncionarioService {
         Funcionario funcionario = new FuncionarioAssalariado(nome, cpf, telefone, setor, salario);
         repository.salvar(funcionario);
     }
+
+    public List<Funcionario> listar() {
+        return repository.listar();
+    }
+
+
 }
