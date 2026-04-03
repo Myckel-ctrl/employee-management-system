@@ -48,4 +48,12 @@ public class FuncionarioService {
         }
         return funcionario;
     }
+
+    public void remover(String nome) {
+        boolean removido = repository.remover(nome);
+
+        if (!removido) {
+            throw new FuncionarioNaoEncontradoException("Funcionário não encontrado.");
+        }
+    }
 }
