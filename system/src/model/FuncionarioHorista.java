@@ -1,4 +1,4 @@
 package model;
 
-public class FuncionarioHorista {
+public class FuncionarioHorista extends Funcionario{
 }
