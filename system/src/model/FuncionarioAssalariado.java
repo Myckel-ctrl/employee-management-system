@@ -8,4 +8,14 @@ public class FuncionarioAssalariado extends Funcionario{
         super(nome, cpf, telefone, setor);
         this.salario = salario;
     }
+
+    @Override
+    public double calcularSalario() {
+        return salario;
+    }
+
+    @Override
+    public void aplicarAumento(double percentual) {
+        salario += salario * (percentual / 100);
+    }
 }
