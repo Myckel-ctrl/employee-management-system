@@ -10,4 +10,14 @@ public class FuncionarioHorista extends Funcionario{
         this.hora = hora;
         this.valorHora = valorHora;
     }
+
+    @Override
+    public void aplicarAumento(double percentual) {
+        valorHora += valorHora * (percentual / 100);
+    }
+
+    @Override
+    public double calcularSalario() {
+        return hora * valorHora;
+    }
 }
