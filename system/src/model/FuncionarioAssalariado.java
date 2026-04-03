@@ -1,4 +1,5 @@
 package model;
 
-public class FuncionarioAssalariado {
+public class FuncionarioAssalariado extends Funcionario{
+
 }
