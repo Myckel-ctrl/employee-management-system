@@ -2,6 +2,7 @@ package service;
 
 import exception.FuncionarioNaoEncontradoException;
 import exception.HoraOuValorInvalidoException;
+import exception.PercentualInvalidoException;
 import exception.SalarioInvalidoException;
 import model.Funcionario;
 import model.FuncionarioAssalariado;
@@ -54,6 +55,18 @@ public class FuncionarioService {
 
         if (!removido) {
             throw new FuncionarioNaoEncontradoException("Funcionário não encontrado.");
+        }
+    }
+
+    public void aplicarAumentoGeral(double percentual) {
+        if (percentual <= 0) {
+            throw new PercentualInvalidoException("Percentual inválido.");
+        }
+
+        List<Funcionario> lista = listar();
+
+        for (Funcionario f: lista) {
+            f.aplicarAumento(percentual);
         }
     }
 }
