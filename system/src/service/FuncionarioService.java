@@ -1,5 +1,6 @@
 package service;
 
+import exception.FuncionarioNaoEncontradoException;
 import exception.HoraOuValorInvalidoException;
 import exception.SalarioInvalidoException;
 import model.Funcionario;
@@ -39,5 +40,12 @@ public class FuncionarioService {
         return repository.listar();
     }
 
+    public Funcionario buscar(String nome) {
+        Funcionario funcionario = repository.buscar(nome);
 
+        if (funcionario == null) {
+            throw new FuncionarioNaoEncontradoException("Funcionário não encontrado.");
+        }
+        return funcionario;
+    }
 }
