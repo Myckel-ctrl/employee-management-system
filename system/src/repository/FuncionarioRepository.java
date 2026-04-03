@@ -7,4 +7,8 @@ public class FuncionarioRepository {
     public void salvar(Funcionario funcionario) {
         funcionarios.add(funcionario);
     }
+
+    public List<Funcionario> listar() {
+        return funcionarios;
+    }
 }
